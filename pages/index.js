@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.less'
+import { Button, Space, DatePicker, Card } from 'antd';
 
 export default function Home() {
+  const onChange = () => {};
   return (
     <div className={styles.container}>
       <Head>
@@ -12,6 +14,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+
+        <Button type="primary">Primary Button</Button>
+        <DatePicker onChange={onChange} />
+
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
